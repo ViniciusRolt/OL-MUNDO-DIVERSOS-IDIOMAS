@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char input[3];
+    
+    printf("Digite um código de idioma (pt, en,de, jp, es): ");
+    fgets(input, sizeof(input), stdin);
+    
+    input[strcspn(input, "\n")] = '\0';
+    
+    if(strcspn(input, "pt") == 0){
+        printf("olá mundo\n");
+    }
+    else if(strcspn(input, "en") == 0){
+        printf("hellow world\n");
+    }
+    else if(strcspn(input, "de") == 0){
+        printf("hellow wereld\n");
+    }
+    else if(strcspn(input, "jp") == 0){
+        printf("Konnichiha Sekai!\n");
+    }
+    else if(strcspn(input, "es") == 0){
+        printf("Helo mundo\n");
+    }
+    else {
+        printf("código de idioma não reconhecido\n");
+    }
+    
+    
+    return 0;
+}
